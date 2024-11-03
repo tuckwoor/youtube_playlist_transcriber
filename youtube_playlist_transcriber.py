@@ -18,18 +18,18 @@ from pytubefix.exceptions import (
 import sys
 import time
 from urllib.error import HTTPError
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
+
+# Replace hardcoded paths with environment variables
+VIDEO_OUTPUT_PATH = os.getenv('VIDEO_OUTPUT_PATH')
+TRANSCRIPTION_OUTPUT_PATH = os.getenv('TRANSCRIPTION_OUTPUT_PATH')
 
 # Set up OAuth2 credentials
 CLIENT_SECRETS_FILE = "client_secrets.json"  # Path to the downloaded JSON file
 SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
-# Add this line near the top of your script, after the imports and authentication
-# Define the playlist ID
-PLAYLIST_ID = "PLGGSd6oQx_MxsF13L18uqL1AF-ioAWDS9"  # Replace with your actual playlist ID
-
-# Define output paths
-VIDEO_OUTPUT_PATH = "z:/Oli Projects/AI/LLM/RAGvideos"
-TRANSCRIPTION_OUTPUT_PATH = "z:/Oli Projects/AI/LLM/RAGtranscriptions"
 
 def get_authenticated_service():
     creds = None
