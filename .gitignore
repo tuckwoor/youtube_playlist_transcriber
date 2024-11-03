@@ -1,0 +1,8 @@
+token.pickle
+token.json
+.env
+OLD/
+ENV/
+client_secrets.json
+playlist_cache.pickle
+transcribed_videos.json
