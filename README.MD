@@ -1,6 +1,6 @@
 # YouTube Playlist Transcriber
 
-This script `youtube_playlist_transcriber.py` downloads videos from a YouTube playlist, extracts audio, transcribes it using OpenAI's Whisper, and saves the transcriptions as text files. Ideal for bulk processing YouTube videos to create text-based references for playlists.
+This script `youtube_playlist_transcriber.py` downloads all videos (other than those already downloaded) at maximum resolution from a selected YouTube playlist, extracts the audio, transcribes it using OpenAI's Whisper, and saves the transcriptions as text files. Ideal for bulk processing YouTube videos to create text-based transcripts (in this case to use as unstructured knowledge data).
 
 ## Features
 - **Authenticate with YouTube API** to access playlists and video details.
