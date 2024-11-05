@@ -448,7 +448,7 @@ def main():
         os.remove(audio_path)
         
         # After successful transcription, add to newly processed list
-        save_transcribed_video(video_id, PLAYLIST_ID, "Unknown Playlist")
+        save_transcribed_video(video_id, playlist_id, playlist_title)
 
 if __name__ == "__main__":
     os.makedirs(VIDEO_OUTPUT_PATH, exist_ok=True)
